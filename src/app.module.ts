@@ -10,7 +10,7 @@ import { ResultsModule } from './results/results.module';
 import { ProctoringGateway } from './proctoring/proctoring/proctoring.gateway';
 
 @Module({
-  imports: [PrismaModule, AuthModule, ClassesModule, ExamsModule, SessionsModule, ResultsModule],
+  imports: [PrismaModule, AuthModule, ClassesModule, ExamsModule, SessionsModule, ResultsModule,ConfigurableModuleBuilder.forRoot({isGlobal:true})],
   controllers: [AppController],
   providers: [AppService, ProctoringGateway],
 })
