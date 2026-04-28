@@ -3,7 +3,8 @@ import { ResultsService } from './results.service';
 import { ResultsController } from './results.controller';
 
 @Module({
+  controllers: [ResultsController],
   providers: [ResultsService],
-  controllers: [ResultsController]
+  exports: [ResultsService],
 })
-export class ResultsModule {}
+export class ResultsModule { }

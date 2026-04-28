@@ -78,6 +78,7 @@ model Question {
   text    String
   options Json?
   answer  Json
+  order   Int          @default(0)
 
   exam    Exam     @relation(fields: [examId], references: [id])
   answers Answer[]
@@ -105,6 +106,8 @@ model SessionParticipant {
 
   session Session @relation(fields: [sessionId], references: [id])
   student User    @relation(fields: [studentId], references: [id])
+
+  @@unique([sessionId, studentId])
 }
 
 model Answer {
@@ -117,6 +120,8 @@ model Answer {
 
   student  User     @relation(fields: [studentId], references: [id])
   question Question @relation(fields: [questionId], references: [id])
+
+  @@unique([sessionId, studentId, questionId])
 }
 
 model ProctoringEvent {
