@@ -24,32 +24,32 @@
   A comprehensive, enterprise-grade online examination system with real-time proctoring capabilities
 </p>
 
-## 🚀 Features
+##  Features
 
-### 🔐 Authentication & Authorization
+###  Authentication & Authorization
 - **Multi-Role System**: Admin, Teacher, and Student roles
 - **JWT Security**: Secure token-based authentication
 - **Password Security**: bcrypt hashing for secure password storage
 - **Role-Based Guards**: Granular access control
 
-### 🛡️ Real-Time Proctoring
+###  Real-Time Proctoring
 - **Live Monitoring**: WebSocket-based real-time student supervision
 - **Violation Detection**: Automated flagging for suspicious activities
 - **Teacher Dashboard**: Comprehensive monitoring interface
 - **Session Management**: Real-time exam session control
 
-### 📝 Examination Management
+###  Examination Management
 - **Exam Creation**: Create and manage assessments with ease
 - **Class Management**: Organize students into classes
 - **Session Tracking**: Complete exam lifecycle management
 - **Results Processing**: Automated grading and analytics
 
-### ⚡ Real-Time Communication
+###  Real-Time Communication
 - **Socket.IO Integration**: Instant bidirectional communication
 - **Live Updates**: Real-time notifications for exam events
 - **Room-Based Messaging**: Secure communication channels
 
-## 🏗️ Architecture
+##  Architecture
 
 ### Technology Stack
 - **Backend**: NestJS (Progressive Node.js Framework)
