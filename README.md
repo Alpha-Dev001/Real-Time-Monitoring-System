@@ -24,20 +24,6 @@
   A comprehensive, enterprise-grade online examination system with real-time proctoring capabilities
 </p>
 
-## 📋 Table of Contents
-
-- [🚀 Features](#-features)
-- [🏗️ Architecture](#️-architecture)
-- [📦 Installation](#-installation)
-- [⚙️ Configuration](#️-configuration)
-- [🚀 Quick Start](#-quick-start)
-- [📚 API Documentation](#-api-documentation)
-- [🛡️ Security](#️-security)
-- [🧪 Testing](#-testing)
-- [📈 Performance](#-performance)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
-
 ## 🚀 Features
 
 ### 🔐 Authentication & Authorization
