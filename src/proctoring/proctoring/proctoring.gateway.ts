@@ -1,4 +1,3 @@
-// src/proctoring/proctoring.gateway.ts
 import {
   WebSocketGateway,
   WebSocketServer,
@@ -18,7 +17,6 @@ export class ProctoringGateway {
     @MessageBody() data: { sessionId: string; studentId: string; type: string },
     @ConnectedSocket() client: Socket,
   ) {
-    // Save event to DB, then notify teacher's room
     this.server.to(`session-${data.sessionId}-teacher`).emit('student-flagged', {
       studentId: data.studentId,
       type: data.type,
