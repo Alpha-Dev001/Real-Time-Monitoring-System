@@ -25,9 +25,7 @@ import { ExamOwnerGuard, ExamAccessGuard } from './guards';
 export class ExamsController {
     constructor(private examsService: ExamsService) { }
 
-    // ── Teacher: Exam CRUD ───────────────────────────────────────────────
-
-    // POST /api/exams/class/:classId
+    
     @Post('class/:classId')
     @Roles(Role.TEACHER)
     createExam(
@@ -38,7 +36,7 @@ export class ExamsController {
         return this.examsService.createExam(teacherId, classId, dto);
     }
 
-    // GET /api/exams/class/:classId
+    
     @Get('class/:classId')
     @Roles(Role.TEACHER)
     getExamsByClass(
@@ -48,7 +46,7 @@ export class ExamsController {
         return this.examsService.getExamsByClass(teacherId, classId);
     }
 
-    // GET /api/exams/:examId  (teacher sees answers, student does not)
+    
     @Get(':examId')
     @UseGuards(ExamAccessGuard)
     getExam(
@@ -61,7 +59,7 @@ export class ExamsController {
         return this.examsService.getExamForStudent(examId);
     }
 
-    // PATCH /api/exams/:examId
+    
     @Patch(':examId')
     @Roles(Role.TEACHER)
     @UseGuards(ExamOwnerGuard)
@@ -72,7 +70,7 @@ export class ExamsController {
         return this.examsService.updateExam(examId, dto);
     }
 
-    // DELETE /api/exams/:examId
+    
     @Delete(':examId')
     @Roles(Role.TEACHER)
     @UseGuards(ExamOwnerGuard)
@@ -80,9 +78,9 @@ export class ExamsController {
         return this.examsService.deleteExam(examId);
     }
 
-    // ── Teacher: Question CRUD ───────────────────────────────────────────
+    
 
-    // POST /api/exams/:examId/questions
+    
     @Post(':examId/questions')
     @Roles(Role.TEACHER)
     @UseGuards(ExamOwnerGuard)
@@ -93,7 +91,7 @@ export class ExamsController {
         return this.examsService.addQuestion(examId, dto);
     }
 
-    // GET /api/exams/:examId/questions
+
     @Get(':examId/questions')
     @Roles(Role.TEACHER)
     @UseGuards(ExamOwnerGuard)
@@ -101,7 +99,7 @@ export class ExamsController {
         return this.examsService.getQuestions(examId);
     }
 
-    // PATCH /api/exams/:examId/questions/:questionId
+    
     @Patch(':examId/questions/:questionId')
     @Roles(Role.TEACHER)
     @UseGuards(ExamOwnerGuard)
@@ -113,8 +111,7 @@ export class ExamsController {
         return this.examsService.updateQuestion(examId, questionId, dto);
     }
 
-    // DELETE /api/exams/:examId/questions/:questionId
-    @Delete(':examId/questions/:questionId')
+   @Delete(':examId/questions/:questionId')
     @Roles(Role.TEACHER)
     @UseGuards(ExamOwnerGuard)
     deleteQuestion(
