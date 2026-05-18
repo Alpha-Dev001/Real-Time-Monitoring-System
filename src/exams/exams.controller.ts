@@ -35,8 +35,6 @@ export class ExamsController {
     ) {
         return this.examsService.createExam(teacherId, classId, dto);
     }
-
-    
     
     @Get('class/:classId')
     @Roles(Role.TEACHER)
