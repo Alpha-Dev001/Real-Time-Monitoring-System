@@ -37,6 +37,7 @@ export class ExamsController {
     }
 
     
+    
     @Get('class/:classId')
     @Roles(Role.TEACHER)
     getExamsByClass(
